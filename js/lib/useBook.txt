@@ -1,0 +1,11 @@
+01.jquery.backgroundSize.js
+
+用JS後加cover和contain屬性，ie6+吃喔鳩咪
+$(elem).css( "background-size", "cover" );
+
+
+02.mediaqueries.js
+
+CSS3 Media Queries for IE 5+, Firefox 1+ and Safari 2
+just include it
+

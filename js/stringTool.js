@@ -1,0 +1,10 @@
+var StringTool = StringTool || {};
+
+(function() {
+    
+
+
+    
+
+
+})();

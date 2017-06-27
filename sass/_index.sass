@@ -1,0 +1,908 @@
+
+html,body 
+	width: 100%
+	height: 100%
+
+
+=size($w,$h:$w)		
+	width: $w
+	height: $h
+
+=fullPage 
+	position: absolute
+	+size(100%)
+	top: 0
+	left: 0
+
+=btn($pic-name)
+	width: image-width("../images/#{$pic-name}")
+	height: image-height("../images/#{$pic-name}") / 2
+	background-image: url("../images/#{$pic-name}")
+	+dTime(0.3s)
+	cursor: pointer
+	position: relative
+	&:hover,&.active
+		// +transform(transitionZ(20px))
+		background-position: 0% 100%
+		// margin-top: 8px
+	&:after 
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background-color: #823021
+
+
+	
+
+=sBtn
+	overflow: hidden
+	position: relative
+	cursor: pointer
+	&:after,&:before 
+		content: ''
+		position: absolute
+		width: 100%
+		height: 15%
+		background-color: rgba(white,0.7) 
+		+transform(skewY(-30deg))
+		top: -30%
+	&:before 
+		height: 3% 
+		background-color: rgba(white,0.5)
+		
+	&:hover 
+		margin-top: -15px!important
+		+dTime 
+		&:after 
+			top: 125%
+			+dTime(0.7s)
+		&:before 
+			top: 125%
+			+dTime(0.8s)
+=goCenter
+	position: absolute
+	left: 50%
+	top: 50%
+	+transform(translateX(-50%) translateY(-50%))
+	// +transform(translateY(-50%))
+
++keyframes(goCircle)
+	0%
+		+transform(translateX(-50%) translateY(-50%) rotate(0deg))
+	100%
+		+transform(translateX(-50%) translateY(-50%) rotate(360deg))
+	
+=goCircle($d)
+	+animation(goCircle $d linear infinite)
+
+
+=rlFlex  
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: row-reverse
+	flex-wrap: nowrap
+
+
+=centerScale($s)
+	+transform(translateX(-50%) translateY(-50%) scale($s))
++keyframes(bar)
+	0%
+		background-position: -52px 0 
+	100%
+		background-position: 0 0 
++keyframes(bar2)
+	0%
+		background-position: 52px 0 
+	100%
+		background-position: 0 0 
+a
+	display: block
+// ---------------------------- //
+.loadingPage
+	+fullPage 
+	+bgi('bg.jpg') 
+	+coverBg
+	z-index: 100 
+	+divGoVerticalCenter_forMom
+	.pic 
+		+bg('loading.gif')
+		+divGoVerticalCenter_forKid
+.scrollWrap
+	+phone 
+		+fullPage
+		overflow-y: scroll
+#header 
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 5
+	.logoWrap	
+		position: absolute
+		+bg('logo.png')
+		left: 40px
+		top: 58px
+		+phone 
+			+bg('mLogo.png')
+			top: 20px
+			left: 20px
+
+	.menuBtn
+		position: absolute
+		top: 20px
+		right: 20px
+		+bg('menum.png')
+	.menuWrap
+		+phone 
+			.clozBtn
+				+bg('cloz.png')
+				position: absolute
+				top: 30px
+				right: 30px
+				z-index: 5
+			.scrollWrap
+				padding: 60px 0 
+				padding-bottom: 140px
+			position: fixed
+			width: 100%
+			min-height: 100%
+			z-index: 20
+			background-color: #823021
+			padding-bottom: 100px
+
+			.mBtn 
+				margin: 0 auto
+				margin-bottom: 3px
+				position: relative
+				
+				@for $i from 1 through 5
+					&.mBtn_#{$i}
+						+bg('mmm#{$i}.png')
+				&:after
+					content: ''
+					position: absolute
+					bottom: -3px
+					+bg('mmml.png')
+					left: 0
+				&:last-child
+					&:after
+						bottom: auto
+						top: -3px
+				&.lineBtn
+					position: absolute
+					top: 970px + 60px
+					left: 330px
+					+bg('mmmline.png')
+					&:after
+						display: none
+				&.FbBtn
+					position: absolute
+					top: 970px + 60px
+					left: 226px
+					+bg('mmmfb.png')
+					&:after
+						display: none
+			.subBtnWrap_4
+				padding: 15px 0
+				@for $i from 1 through 6
+					.sBtn_#{$i}
+						+bg('mmm4#{$i}.png')
+						margin: 0 auto
+
+
+		+pc
+			.scrollWrap
+				+rlFlex
+			position: absolute
+			right: 22px
+			top: 58px
+			// +rlFlex
+			.mBtn 
+				margin-left: 19px
+				@for $i from 1 through 5
+					&.mBtn_#{$i}
+						+btn('mBtn#{$i}.png')
+						
+				&.lineBtn
+					+btn('lineBtn.png')
+				&.FbBtn
+					+btn('fbBtn.png')
+
+			
+			.subBtnWrap_4 
+				+rlFlex
+				+dTime(.6s)
+				overflow: hidden
+				max-width: 0
+				&.open
+					max-width: 400px
+				@for $i from 1 through 6
+					.sBtn_#{$i}
+						+bg('mm#{$i - 1}.png')
+				.subBtn
+					margin-top: 10px
+					margin-left: 5px
+					cursor: pointer
+					+dTime(.1s)
+					&:hover,&.active
+						margin-top: 15px
+
+					&:last-child
+						margin-left: 19px
+
+
+
+.mainContainer 
+	+fullPage 
+	+bgi('bg.jpg') 
+	+coverBg
+	overflow: hidden
+
+	.pageWrap
+		.page 
+			display: none
+	@for $i from 1 through 5 
+		&.channel_#{$i}
+			.pageWrap
+				.p#{$i} 
+					display: block
+			+pc
+				.menuWrap
+					.mBtn_#{$i}
+						background-position: 0% 100%
+			@if $i == 1
+				.switcherWrap	
+					.prevBtn
+						display: none
+			@if $i == 5 
+				.switcherWrap	
+					.nextBtn
+						display: none
+			@if $i == 4
+				+pc
+					#header
+						.menuWrap
+							.subBtnWrap_4 
+								max-width: 250px
+	//bar
+	+pc
+		&:after 
+			+size(100%,39px)
+			+bgi('topBar.png')
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			+animation(bar 1s linear infinite)
+		&:before
+			+size(100%,39px)
+			+bgi('topBar.png')
+			+scaleY(-1)
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			+animation(bar2 1s linear infinite)
+
+.pageWrap
+	+fullPage 
+	.page 
+		+fullPage 
+		.pageContainer 
+			position: relative
+			+pc
+				+goCenter
+			+phone 
+				+fullPage 
+				overflow-y: scroll
+				padding-bottom: 80px
+				padding-top: 150px
+			.contentContainer
+				display: none
+			@for $i from 1 through 3
+				&.channel_#{$i}
+					.content_#{$i}
+						display: block
+					.contentTab
+						.tab_#{$i}
+							&:after
+								+opacity(1)
+								+centerScale(1)
+		.contentTab
+			position: absolute
+			left: 50%
+			top: 50%
+			margin-left: -465px
+			margin-top: 245px
+			+rlFlex
+			.tab  
+				@for $i from 1 through 3
+					&.tab_#{$i}
+						+bg('tab#{$i}.png')
+
+				+dTime(.1)
+				position: relative
+				cursor: pointer
+				&:hover 
+					+scale(.95)
+					
+				&:after 
+					content: '' 
+					position: absolute
+					+bg('circle.png')
+					+goCenter
+					+dTime
+					+centerScale(1.1)
+					+opacity(0)
+				&.active 
+					+opacity(1)
+					+centerScale(1)
+
+					
+
+	.p1
+		.pageContainer
+			+phone
+				padding-top: 0
+			.phoneShow
+				.pic 
+					+bg('index1.png')
+
+			@for $i from 1 through 13
+				.pic#{$i}
+					+bg('index_p#{$i}.png')
+					position: absolute
+					top: 0
+					left: 0
+			.pic1 
+				position: relative
+			.playBtn 
+				position: absolute
+				left: 50%
+				top: 100%
+				margin-left: 3px
+				cursor: pointer
+				@for $i from 1 through 3
+					.pb#{$i}
+						position: absolute
+						+bg('index_play#{$i}.png')
+						+goCenter
+				&:hover 
+					.pb1	
+						+transform(translateX(-50%) translateY(-50%) scale(1.1))
+						+dTime(0.2s)
+					.pb2
+						+transform(translateX(-50%) translateY(-50%) scale(0.9))
+						+dTime(0.2s)
+					.pb3
+						top: 55px
+						+dTime(0.2s)
+
+				.pb1	
+					left: 5px
+					
+				.pb2
+					// +dTime(0.2s)
+				.pb3
+					top: 65px
+					// +dTime(0.2s)
+
+			.lightWrap
+				+goCenter
+				+goCircle(20s)
+				+bg('light2.png')
+				// .light 
+				// 	+bg('light.png')
+				// 	+goCenter
+				// .light2
+				// 	+bg('light.png')
+				// 	+goCenter
+				// 	+transform(translateX(-50%) translateY(-50%) rotate(34deg))
+		.btnWrap
+			
+
+			
+			+pc
+				+rlFlex	
+				position: absolute
+				right: 23px
+				bottom: 65px
+				@for $i from 1 through 2
+					.btn#{$i}
+						margin-left: 18px
+						+bg('brBtn#{$i}.png')
+						+sBtn
+			+phone
+				@for $i from 1 through 2
+					.btn#{$i}
+						+bg('p1b#{$i}.png')
+						margin: 0 auto
+						position: relative
+						z-index: 2
+				.btn1
+					margin-top: -120px
+					margin-bottom: 20px
+
+	.p2 
+		.pageContainer
+			+phone 
+				padding-top: 0
+			.phoneShow
+				.pic 
+					+bg('mp2.png')
+			.contentContainer
+				+goCenter
+				&.content_1
+					.txtWrap
+						position: absolute
+						top: -160px
+						left: 90px
+						@for $i from 1 through 5
+							.t#{$i}
+								+bg('p1_#{$i}.png')
+								position: absolute
+								top: 0
+								left: 0
+						.t1 
+							position: relative
+						.title
+							position: absolute
+							left: 220px
+							top: 0
+							@for $i from 1 through 8
+								.tt#{$i}
+									+bg('p1t_#{$i}.png')
+									position: absolute
+									top: 0
+									left: 0
+							.tt1
+								position: relative
+					.picWrap
+						position: absolute
+						top: -160px
+						left: -422px
+						.light
+							+bg('light2.png')
+							position: absolute
+							top: 90px
+							left: 70px
+							+goCircle(10s)
+						@for $i from 1 through 8
+							.p#{$i}
+								+bg('p1_p#{$i}.png')
+								position: absolute
+								top: 0
+								left: 0
+				&.content_2
+					.txtWrap 
+						position: absolute
+						+goCenter
+						@for $i from 1 through 8
+							.t#{$i}
+								+bg('p1a_#{$i}.png')
+								position: absolute
+								top: 0
+								left: 0
+						.t1 
+							position: relative
+	.p3  
+		.pageContainer
+			.phoneShow 
+				.pic 
+					+bg('mp3.png')
+					margin: 0 auto
+			@for $i from 1 through 5
+				.t#{$i}
+					+bg('p2_#{$i}.png')
+					position: absolute
+					top: 0
+					left: 0
+			.t1 
+				position: relative
+			.title
+				position: absolute
+				left: 650px
+				top: 0
+				@for $i from 1 through 4
+					.tt#{$i}
+						+bg('p2t_#{$i}.png')
+						position: absolute
+						top: 0
+						left: 0
+					.tt1 
+						position: relative
+	.p4
+		.pageContentContainer 
+			.pageContainer
+				display: none
+		@for $i from 1 through 6 
+			&.channel_#{$i}
+				.pageContentContainer
+					.pageContainer_#{$i} 
+						display: block
+		
+		.pageContainer_1
+			.phoneShow
+				.pic 
+					+bg('mp41.png')
+					margin: 0 auto
+				@for $i from 1 through 5
+					.subBtn#{$i}
+						+bg('mp4b#{$i}.png')
+						margin: 0 auto
+			.txtWrap
+				+rlFlex
+				.man1 
+					+bg('p3_7.png')
+					position: absolute
+					top: 100px
+					right: -230px
+				.man2 
+					+bg('p3_8.png')
+					position: absolute
+					top: 100px
+					left: -230px
+				.line
+					+bg('p3_1.png')
+				@for $i from 1 through 5
+					.t#{$i}
+						+bg('p41_#{$i}.png')
+						cursor: pointer
+						position: relative
+						z-index: 2
+						&:hover 
+							margin-top: 15px!important
+							// +opacity(0.7)!important
+							+dTime(.1s)
+
+
+						// position: absolute
+						// top: 0
+						// left: 0
+				// .t1 
+					// position: relative
+				.title
+					position: relative
+					margin-left: 30px
+					@for $i from 1 through 4
+						.tt#{$i}
+							+bg('p3t_#{$i}.png')
+							position: absolute
+							top: 0
+							left: 0
+						.tt1 
+							position: relative
+		.pageContainer_2
+			.phoneShow 
+				.pic 
+					+bg('mp42.png')
+					margin: 0 auto
+			.content_1
+				.txtWrap
+					position: absolute
+					top: -230px
+					left: 130px
+					@for $i from 1 through 6
+						.t#{$i}
+							+bg('p3_1_#{$i}.png')
+							position: absolute
+							top: 0
+							left: 0
+						.t1 
+							position: relative
+						.title
+							position: absolute
+							left: 220px
+							top: 0
+							@for $i from 1 through 4
+								.tt#{$i}
+									+bg('p3_1_t#{$i}.png')
+									position: absolute
+									top: 0
+									left: 0
+							.tt1
+								position: relative
+				.picWrap
+					position: absolute
+					top: -385px
+					left: -532px
+					+bg('gif1.gif')
+			.content_2
+				.txtWrap
+					@for $i from 1 through 6
+						.t#{$i}
+							+bg('p3_2_#{$i}.png')
+							position: absolute
+							top: 0
+							left: 0
+						.t1 
+							position: relative
+		.pageContainer_3
+			.phoneShow 
+				.pic 
+					+bg('mp43.png')
+					margin: 0 auto
+			.content_1
+				.txtWrap
+					position: absolute
+					top: -230px
+					left: 157px
+					@for $i from 1 through 5
+						.t#{$i}
+							+bg('p3_3_#{$i}.png')
+							position: absolute
+							top: 0
+							left: 0
+						.t1 
+							position: relative
+						.title
+							position: absolute
+							left: 210px
+							top: 0
+							@for $i from 1 through 5
+								.tt#{$i}
+									+bg('p3_3_t#{$i}.png')
+									position: absolute
+									top: 0
+									left: 0
+							.tt1
+								position: relative
+				.picWrap
+					position: absolute
+					top: -385px
+					left: -582px
+					+bg('gif2.gif')
+			.content_2
+				.txtWrap
+					@for $i from 1 through 2
+						.t#{$i}
+							+bg('p4_3_2p#{$i}.png')
+							position: absolute
+							top: 0
+							left: 0
+						.t1 
+							position: relative
+		.pageContainer_4
+			.phoneShow 
+				.pic 
+					+bg('mp44.png')
+					margin: 0 auto
+			.txtWrap
+				position: absolute
+				top: -230px
+				left: 157px
+				@for $i from 1 through 7
+					.t#{$i}
+						+bg('p3_4_#{$i}.png')
+						position: absolute
+						top: 0
+						left: 0
+					.t1 
+						position: relative
+					.title
+						position: absolute
+						left: 293px
+						top: 0
+						@for $i from 1 through 4
+							.tt#{$i}
+								+bg('p3_4_t#{$i}.png')
+								position: absolute
+								top: 0
+								left: 0
+						.tt1
+							position: relative
+			.picWrap
+				position: absolute
+				top: -385px
+				left: -582px
+				+bg('gif5.gif')
+		.pageContainer_5
+
+			.phoneShow 
+				.pic 
+					+bg('mp45.png')
+					margin: 0 auto
+				
+			.content_1
+				.txtWrap
+					position: absolute
+					top: -230px
+					left: 157px
+					@for $i from 1 through 5
+						.t#{$i}
+							+bg('p3_5_#{$i}.png')
+							position: absolute
+							top: 0
+							left: 0
+						.t1 
+							position: relative
+						.title
+							position: absolute
+							left: 196px
+							top: 0
+							@for $i from 1 through 5
+								.tt#{$i}
+									+bg('p3_5_t#{$i}.png')
+									position: absolute
+									top: 0
+									left: 0
+							.tt1
+								position: relative
+				.picWrap
+					position: absolute
+					top: -385px
+					left: -582px
+					+bg('gif6.gif')
+			.content_2
+				.txtWrap
+					@for $i from 1 through 9
+						.t#{$i}
+							+bg('p3_5_2_#{$i}.png')
+							position: absolute
+							top: 0
+							left: 0
+						.t1 
+							position: relative
+			.content_3
+				.txtWrap
+					@for $i from 1 through 6 
+						.t#{$i}
+							+bg('p3_5_3_#{$i}.png')
+							position: absolute
+							top: 0
+							left: 0
+						.t1 
+							position: relative
+		.pageContainer_6 
+			+phone
+				padding-top: 85px
+			.phoneShow 
+				.pic 
+					+bg('mp46.png')
+					margin: 0 auto
+			.content_1
+				.txtWrap
+					position: absolute
+					top: -230px
+					left: 157px
+					@for $i from 1 through 5
+						.t#{$i}
+							+bg('p3_6_1_#{$i}.png')
+							position: absolute
+							top: 0
+							left: 0
+						.t1 
+							position: relative
+						.title
+							position: absolute
+							left: 207px
+							top: 0
+							@for $i from 1 through 5
+								.tt#{$i}
+									+bg('p3_6_1_t#{$i}.png')
+									position: absolute
+									top: 0
+									left: 0
+							.tt1
+								position: relative
+				.picWrap
+					position: absolute
+					top: -385px
+					left: -582px
+					@for $i from 1 through 5
+						.p#{$i}
+							+bg('p3_6_1_p#{$i}.png')
+							position: absolute
+							top: 440px
+							left: -120px
+					.p1 
+						top: 100px
+						left: 320px
+					.light 
+						position: absolute
+						top: 0
+						left: 0
+						+bg('light.png')
+						&.l1
+							top: 160px
+							left: 430px
+							+goCircle(20s)
+						&.l2
+							top: 450px
+							left: 480px
+							+goCircle(20s)
+			.content_2
+				.txtWrap
+					@for $i from 1 through 5
+						.t#{$i}
+							+bg('p3_6_2_#{$i}.png')
+							position: absolute
+							top: 0
+							left: 0
+						.t1 
+							position: relative
+	.p5
+		.pageContainer
+			+phone
+				padding-top: 0
+			.phoneShow
+				.pic 
+					+bg('mp51.png')
+					margin-bottom: 50px
+				@for $i from 1 through 3
+					.sBtn#{$i}
+						+bg('mp5b#{$i}.png')
+						margin: 0 auto 20px
+			.picWrap
+				position: absolute
+				left: -478px
+				top: -395px
+				@for $i from 1 through 5
+					.p#{$i}
+						+bg('p4_p#{$i}.png')
+						position: absolute
+						top: 0
+						left: 0
+				.p3 
+					+goCircle(20s)
+					top: 330px
+					left: 670px
+			.txtWrap
+				position: absolute
+				left: -458px
+				top: -225px
+				+rlFlex  
+				@for $i from 7 through 9
+					.t#{$i - 5}
+						+bg('p4_p#{$i}.png')
+						margin-left: 13px!important
+						+sBtn
+				.t1
+					margin-left: 43px!important	
+					+bg('p4_p6.png')
+
+.switcherWrap	 				 
+	.prevBtn
+		position: fixed
+		right: 25px
+		top: 50%
+		margin-top: -18px
+		width: 86px
+		height: 68px
+		cursor: pointer
+		.pic	
+			+bg('hand.png')
+			position: absolute
+			top: 0
+			left: 0
+		.txt
+			+bg('back.png')
+			position: absolute
+			top: 50px
+			left: 18px
+	.nextBtn
+		position: fixed
+		left: 25px
+		top: 50%
+		margin-top: -18px
+		width: 86px
+		height: 68px
+		cursor: pointer
+		.pic	
+			+bg('prev.png')
+			position: absolute
+			top: 0
+			left: 0
+			// +scaleX(-1)
+
+		.txt
+			+bg('front.png')
+			position: absolute
+			top: 50px
+			left: 15px

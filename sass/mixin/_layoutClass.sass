@@ -1,0 +1,91 @@
+/*	header style */
+.mainMenu
+	>a 
+		display: block
+	&.horizontal_menu
+		>a
+			display: inline-block
+			margin-left: -4px
+	&.left_menu
+		text-align: left
+	&.middle_menu
+		text-align: center	
+	&.right_menu
+		text-align: right
+		
+
+/*	boxs style */
+
+
+
+
+// 左右區塊中間斜線
+// *ex of skewBoxWrap
+// <div class=" fullPage skewBoxWrap sb_withScaleAnimation">
+//     <div class="skewbox sb1">
+//         <div class="sb_container coverBg fullPage blackHoverBtn" style="background-image: url(images/videoDemoPic1.jpg)"></div>
+//     </div>
+//     <div class="skewbox sb2">
+//         <div class="sb_container coverBg fullPage blackHoverBtn" style="background-image: url(images/videoDemoPic2.jpg)"></div>
+//     </div>
+// </div>
+
+.skewBoxWrap
+	position: relative
+	.skewbox
+		position: absolute
+		width: 60%
+		height: 100%
+		left: 0
+		top: 0
+		&.sb2
+			left: 50%
+			+transform(skewX(-7deg))
+			overflow: hidden
+			+backface-visibility(hidden) // 消鋸齒
+			.sb_container
+				+transform(skewX(7deg))
+				left: -10%
+
+	+pc 
+		.sb_container
+			+blackHoverBtn
+	//要有hover ani
+	&.sb_withScaleAnimation
+		.sb1
+			.sb_container
+				+dTime
+				+translateZ(0,300px)
+			&:hover 
+				.sb_container
+					+translateZ(10px,300px)
+		.sb2
+			.sb_container
+				+dTime
+				+transform(skewX(7deg) perspective(300px) translateZ(0))
+			&:hover  
+				.sb_container
+					+transform(skewX(7deg) perspective(300px) translateZ(10px))
+	//手機要變直立的		
+	&.sb_phoneVertical
+		+phone
+			&.sb_withScaleAnimation
+				.sb2
+					.sb_container
+						+transform(skewX(0deg) skewY(-5deg) perspective(300px) translateZ(0))
+					&:hover  
+						.sb_container
+							+transform(skewX(0deg)  skewY(5deg) perspective(300px) translateZ(10px))
+			.skewbox
+				position: relative
+				width: 100%
+				height: 60%
+				&.sb2 
+					left: 0 
+					top: -10%
+					+transform(skewX(0deg) skewY(-5deg))
+					
+					.sb_container
+						+transform(skewX(0deg) skewY(5deg))
+						left: 0
+						top: -10%
