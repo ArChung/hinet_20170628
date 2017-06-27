@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 function initShareBtns(){
 	$('.lineBtn').click(function(){
-		ChungTool.shareToLine(escape(document.title+window.location.href));
+		ChungTool.shareToLine(window.location.href);
 	});
 
 	$('.FbBtn').click(function(){
