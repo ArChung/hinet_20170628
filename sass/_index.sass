@@ -111,8 +111,17 @@ a
 	z-index: 100 
 	+divGoVerticalCenter_forMom
 	.pic 
-		+bg('loading.gif')
+		+bg('loading.gif') 
 		+divGoVerticalCenter_forKid
+		position: relative
+		.txt
+			font-size: 2rem
+			font-weight: bold
+			position: absolute
+			bottom: 84px
+			width: 100%
+			text-align: center
+
 .scrollWrap
 	+phone 
 		+fullPage

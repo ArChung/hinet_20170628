@@ -3218,6 +3218,15 @@ a {
   background-image: url("../images/loading.gif");
   display: inline-block;
   vertical-align: middle;
+  position: relative;
+}
+.loadingPage .pic .txt {
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  bottom: 84px;
+  width: 100%;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

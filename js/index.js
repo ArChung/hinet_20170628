@@ -33,9 +33,9 @@ $(document).ready(function() {
         },
         each: function(loaded, count, success) {
             var r = Math.floor(loaded / count * 100);
-            console.log(loaded,count)
-            // $('#loading').find('.loadingTxt').html(r);
-            // $('#loading').find('img').attr('src', 'images/loadingImage_' + parseInt((r / 17) + 1) + '.png');
+            // console.log(loaded,count)
+            $('.loadingPage').find('.txt').html(r+'%');
+            
         },
         waitForAll: true
     });
