@@ -3741,6 +3741,7 @@ a {
     -moz-animation: bar 1s linear infinite;
     -webkit-animation: bar 1s linear infinite;
     animation: bar 1s linear infinite;
+    z-index: 2;
   }
   .mainContainer:before {
     width: 100%;
@@ -3754,6 +3755,7 @@ a {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 2;
     -moz-animation: bar 1s linear infinite;
     -webkit-animation: bar 1s linear infinite;
     animation: bar 1s linear infinite;
