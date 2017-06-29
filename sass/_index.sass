@@ -35,33 +35,35 @@ html,body
 		background-color: #823021
 
 
-	
+=smallHeight
+	@media screen and (max-height: 750px)
+		@content 
 
 =sBtn
 	overflow: hidden
 	position: relative
 	cursor: pointer
 	&:after,&:before 
-		content: ''
-		position: absolute
-		width: 100%
-		height: 15%
-		background-color: rgba(white,0.7) 
-		+transform(skewY(-30deg))
-		top: -30%
+		// content: ''
+		// position: absolute
+		// width: 100%
+		// height: 15%
+		// background-color: rgba(white,0.7) 
+		// +transform(skewY(-30deg))
+		// top: -30%
 	&:before 
-		height: 3% 
-		background-color: rgba(white,0.5)
+		// height: 3% 
+		// background-color: rgba(white,0.5)
 		
 	&:hover 
 		margin-top: -15px!important
 		+dTime 
-		&:after 
-			top: 125%
-			+dTime(0.7s)
-		&:before 
-			top: 125%
-			+dTime(0.8s)
+		// &:after 
+		// 	top: 125%
+		// 	+dTime(0.7s)
+		// &:before 
+		// 	top: 125%
+		// 	+dTime(0.8s)
 =goCenter
 	position: absolute
 	left: 50%
@@ -157,7 +159,7 @@ a
 				z-index: 5
 			.scrollWrap
 				padding: 60px 0 
-				padding-bottom: 140px
+				padding-bottom: 280px
 			position: fixed
 			width: 100%
 			min-height: 100%
@@ -250,8 +252,13 @@ a
 .mainContainer 
 	+fullPage 
 	+bgi('bg.jpg') 
+	// height: calc(100% - 100px)
+	height: 100%
+	top: 100px
 	+coverBg
 	overflow: hidden
+	+phone 
+		height: calc(100% - 100px)
 
 	.pageWrap
 		.page 
@@ -269,6 +276,10 @@ a
 				.switcherWrap	
 					.prevBtn
 						display: none
+					.nextBtn
+						+bg('p1_h1bg.png')
+						.pic	
+							+bg('p1_hand.png')
 			@if $i == 5 
 				.switcherWrap	
 					.nextBtn
@@ -297,7 +308,7 @@ a
 			position: absolute
 			bottom: 0
 			left: 0
-			+animation(bar2 1s linear infinite)
+			+animation(bar 1s linear infinite)
 
 .pageWrap
 	+fullPage 
@@ -307,6 +318,9 @@ a
 			position: relative
 			+pc
 				+goCenter
+				+smallHeight 
+					+centerScale(.9)
+					margin-top: 30px
 			+phone 
 				+fullPage 
 				overflow-y: scroll
@@ -620,7 +634,7 @@ a
 				.picWrap
 					position: absolute
 					top: -385px
-					left: -532px
+					left: -552px
 					+bg('gif1.gif')
 			.content_2
 				.txtWrap
@@ -882,36 +896,115 @@ a
 		right: 25px
 		top: 50%
 		margin-top: -18px
-		width: 86px
-		height: 68px
 		cursor: pointer
+		+bg('p1h2.png')
+		+phone 
+			right: 5px
 		.pic	
-			+bg('hand.png')
+			// +bg('hand.png')
+			+bg('p1h3.png')
 			position: absolute
-			top: 0
-			left: 0
-		.txt
-			+bg('back.png')
-			position: absolute
-			top: 50px
-			left: 18px
+			top: 26px
+			left: 23px
 	.nextBtn
+		+bg('p1h12.png')
 		position: fixed
 		left: 25px
 		top: 50%
 		margin-top: -18px
-		width: 86px
-		height: 68px
 		cursor: pointer
+		+phone 
+			left: 5px
 		.pic	
-			+bg('prev.png')
+			// +bg('prev.png')
+			+bg('p1h23.png')
+			position: absolute
+			top: 26px
+			left: 20px
+
+
+.videoPop
+	+fullPage 
+	position: fixed
+	background-color: black
+	z-index: 20
+	+divGoVerticalCenter_forMom
+	.videoWrap
+		+divGoVerticalCenter_forKid 
+		+aspect-ratio(1280,720)
+		width: 100%
+		max-height: 99%
+		// border: 1px solid white
+		iframe
 			position: absolute
 			top: 0
 			left: 0
-			// +scaleX(-1)
+	.clozBtn
+		+bg('videoCloz.png')	
+		position: absolute
+		top: 30px
+		right: 30px
+		cursor: pointer
 
-		.txt
-			+bg('front.png')
-			position: absolute
-			top: 50px
-			left: 15px
+
+
+// hinet header 
+.ci
+	width: 100%
+	height: 100px
+	background: #fff
+	position: relative
+	// z-index: 200
+	.logo
+		position: relative
+		max-width: 653px
+		max-height: 169px
+		margin: 0
+		left: 0px
+		top: -10px
+		img
+			width: 60%
+			height: 100%
+			margin: 0
+			padding: 0
+
+	.layer
+		font-size: 14px
+		background: #0361A1
+		color: #FFF
+		width: 260px
+		height: 25px
+		// /*float: right;
+		position: absolute
+		top: 75px - 8px
+		right: 20%
+		margin-top: 0
+		padding-top: 5px
+		text-align: center
+		border-top-right-radius: 8px
+		border-top-left-radius: 8px
+
+	.CommunitySharing
+		position: absolute
+		width: 8%
+		top: 50px
+		right: 1%
+
+	.icon.facebook
+		float: left
+
+	.CommunitySharing img
+		margin: 0 auto
+
+	.blueBar
+		width: 100%
+		position: absolute
+		top: 92px
+		height: 8px
+		background: #0361A1
+
+	.hoverButton
+		cursor: pointer
+
+	.fontOrange
+		color: #f58923

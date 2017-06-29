@@ -7,6 +7,22 @@ body
 	.loadingPage
 		.pic
 			.txt 0%
+	.videoPop.hide
+		.videoWrap
+		.clozBtn
+	.ci
+		.logo
+			img(src='http://basicpromo-eshop.cdn.hinet.net/broadband/broadbandlimittime/images/logo_dt.png')
+		//- .CommunitySharing
+		//- 	.icon.facebook.hoverButton(onclick="location.href='http://www.facebook.com/sharer/sharer.php?u=https://eshop.cht.com.tw/BasicPromo/broadbandlimittime.html&utm_source=facebook&utm_medium=landingshare&utm_campaign=broadbandlimittime';", target='_blank', title='分享到Facebook')
+		//- 		img(src='http://basicpromo-eshop.cdn.hinet.net/broadband/broadbandlimittime/images/fb_icon.png')
+		//- 	.icon.Line.hoverButton(onclick="location.href='http://line.naver.jp/R/msg/text/?https://eshop.cht.com.tw/BasicPromo/broadbandlimittime.html?utm_source=line&utm_medium=landingshare&utm_campaign=broadbandlimittime';")
+		//- 		img(src='http://basicpromo-eshop.cdn.hinet.net/broadband/broadbandlimittime/images/line_icon.png')
+		.layer
+			span.hoverButton(onclick="location.href='https://eshop.cht.com.tw/mobile/';") 首頁  > 
+			span.hoverButton(onclick="location.href='https://eshop.cht.com.tw/mobile/Personal/Promo';") 優惠情報台  > 
+			span.fontOrange 光世代神功秘笈
+		.blueBar
 
 	.mainContainer.channel_1
 		#header 
@@ -33,7 +49,7 @@ body
 			.page.p1
 				.pageContainer.perspectiveWrap
 					.phoneShow
-						.pic
+						.pic.videoBtn
 						.btnWrap
 							//- .btn1
 							a.btn1.gtmTrackingBtn(data-gtm='apply1_m-conv',href='https://eshop.cht.com.tw/Web/Personal/Internet/UnfixIndex?megaID=7880A0B5-5B6D-472B-9089-4A60C383943D',target='_blank')
@@ -55,7 +71,7 @@ body
 							.pic7.txtAni.hAni
 							.pic8.txtAni.hAni
 							.pic9.txtAni.hAni
-						.playBtn
+						.playBtn.videoBtn
 							.pb2.hAni
 							.pb1.lAni.hAni
 							.pb3.tAni.hAni
@@ -169,14 +185,15 @@ body
 									.t3.hAni.lAni
 									.t4.hAni.lAni
 									.t5.hAni.lAni
+									.t6.hAni.lAni
 							.contentContainer.content_2
 								.txtWrap
 									.t1.hAni.rBAni
 									.t2.hAni.rBAni
 									.t3.hAni.lBAni
-									.t4.hAni.popAni
-									.t5.hAni.popAni
-									.t6.hAni.bAni 
+									.t4.hAni_costom.popAni
+									.t5.hAni_costom.popAni
+									.t6.hAni_costom.bAni
 							.contentTab
 								.tab.tab_1
 								.tab.tab_2
@@ -300,10 +317,10 @@ body
 									.t1.hAni
 									.t2.hAni.lAni
 									.t3.hAni.rAni
-									.t4.hAni.popAni
-									.t5.hAni.popAni
+									.t5.hAni_costom.popAni
+									.t4.hAni_costom.popAni
 							.contentTab
-								.tab.tab_1
+								.tab.tab_1 
 								.tab.tab_2
 			.page.p5
 				.pageContainer
@@ -328,14 +345,12 @@ body
 		.switcherWrap
 			.prevBtn
 				.pic
-				.txt
+				//- .txt
 			.nextBtn
 				.pic
-				.txt
+				//- .txt
 	.loadPicWrap(style='display:none')
-
-
-
-	
+		.loadingFirst
+		.others
 	script(type='text/javascript', src='js/index.js')
 		

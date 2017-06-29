@@ -1,13 +1,17 @@
-var phoneImgs = '<img src="images/bg.jpg"><img src="images/cloz.png"><img src="images/index1.png"><img src="images/logo1.png"><img src="images/logo2.png"><img src="images/menum.png"><img src="images/mLogo.png"><img src="images/mmm1.png"><img src="images/mmm2.png"><img src="images/mmm3.png"><img src="images/mmm4.png"><img src="images/mmm41.png"><img src="images/mmm42.png"><img src="images/mmm43.png"><img src="images/mmm44.png"><img src="images/mmm45.png"><img src="images/mmm46.png"><img src="images/mmm5.png"><img src="images/mmmfb.png"><img src="images/mmml.png"><img src="images/mmmline.png"><img src="images/mp2.png"><img src="images/mp3.png"><img src="images/mp41.png"><img src="images/mp42.png"><img src="images/mp43.png"><img src="images/mp44.png"><img src="images/mp45.png"><img src="images/mp46.png"><img src="images/mp4b1.png"><img src="images/mp4b2.png"><img src="images/mp4b3.png"><img src="images/mp4b4.png"><img src="images/mp4b5.png"><img src="images/mp51.png"><img src="images/mp5b1.png"><img src="images/mp5b2.png"><img src="images/mp5b3.png"><img src="images/p1b1.png"><img src="images/p1b2.png"></div>';
-var pcImgs = '<img src="images/2.png"><img src="images/back.png"><img src="images/bg.jpg"><img src="images/bg.png"><img src="images/brBtn1.png"><img src="images/brBtn2.png"><img src="images/circle.png"><img src="images/fbBtn.png"><img src="images/front.png"><img src="images/gif1.gif"><img src="images/gif2.gif"><img src="images/gif3.gif"><img src="images/gif4.gif"><img src="images/gif5.gif"><img src="images/gif6.gif"><img src="images/hand.png"><img src="images/index_p1.png"><img src="images/index_p10.png"><img src="images/index_p11.png"><img src="images/index_p12.png"><img src="images/index_p13.png"><img src="images/index_p2.png"><img src="images/index_p3.png"><img src="images/index_p4.png"><img src="images/index_p5.png"><img src="images/index_p6.png"><img src="images/index_p7.png"><img src="images/index_p8.png"><img src="images/index_p9.png"><img src="images/index_play1.png"><img src="images/index_play2.png"><img src="images/index_play3.png"><img src="images/light.png"><img src="images/light2.png"><img src="images/lineBtn.png"><img src="images/logo.png"><img src="images/mBtn1.png"><img src="images/mBtn2.png"><img src="images/mBtn3.png"><img src="images/mBtn4.png"><img src="images/mBtn5.png"><img src="images/ml1.png"><img src="images/ml2.png"><img src="images/mm0.png"><img src="images/mm1.png"><img src="images/mm2.png"><img src="images/mm3.png"><img src="images/mm4.png"><img src="images/mm5.png"><img src="images/p1a_1.png"><img src="images/p1a_2.png"><img src="images/p1a_3.png"><img src="images/p1a_4.png"><img src="images/p1a_5.png"><img src="images/p1a_6.png"><img src="images/p1a_7.png"><img src="images/p1a_8.png"><img src="images/p1t_1.png"><img src="images/p1t_2.png"><img src="images/p1t_3.png"><img src="images/p1t_4.png"><img src="images/p1t_5.png"><img src="images/p1t_6.png"><img src="images/p1t_7.png"><img src="images/p1t_8.png"><img src="images/p1_1.png"><img src="images/p1_2.png"><img src="images/p1_3.png"><img src="images/p1_4.png"><img src="images/p1_5.png"><img src="images/p1_p1.png"><img src="images/p1_p2.png"><img src="images/p1_p3.png"><img src="images/p2t_1.png"><img src="images/p2t_2.png"><img src="images/p2t_3.png"><img src="images/p2t_4.png"><img src="images/p2_1.png"><img src="images/p2_12.png"><img src="images/p2_2.png"><img src="images/p2_3.png"><img src="images/p2_4.png"><img src="images/p2_5.png"><img src="images/p3t_1.png"><img src="images/p3t_2.png"><img src="images/p3t_3.png"><img src="images/p3t_4.png"><img src="images/p3_.png"><img src="images/p3_1.png"><img src="images/p3_1_1.png"><img src="images/p3_1_2.png"><img src="images/p3_1_3.png"><img src="images/p3_1_4.png"><img src="images/p3_1_5.png"><img src="images/p3_1_6.png"><img src="images/p3_1_t1.png"><img src="images/p3_1_t2.png"><img src="images/p3_1_t3.png"><img src="images/p3_1_t4.png"><img src="images/p3_2.png"><img src="images/p3_2_1.png"><img src="images/p3_2_2.png"><img src="images/p3_2_3.png"><img src="images/p3_2_4.png"><img src="images/p3_2_5.png"><img src="images/p3_2_6.png"><img src="images/p3_3.png"><img src="images/p3_3_1.png"><img src="images/p3_3_2.png"><img src="images/p3_3_2t.png"><img src="images/p3_3_3.png"><img src="images/p3_3_4.png"><img src="images/p3_3_5.png"><img src="images/p3_3_t1.png"><img src="images/p3_3_t2.png"><img src="images/p3_3_t3.png"><img src="images/p3_3_t4.png"><img src="images/p3_3_t5.png"><img src="images/p3_4.png"><img src="images/p3_4_1.png"><img src="images/p3_4_2.png"><img src="images/p3_4_3.png"><img src="images/p3_4_4.png"><img src="images/p3_4_5.png"><img src="images/p3_4_6.png"><img src="images/p3_4_7.png"><img src="images/p3_4_t1.png"><img src="images/p3_4_t2.png"><img src="images/p3_4_t3.png"><img src="images/p3_4_t4.png"><img src="images/p3_5.png"><img src="images/p3_5_1.png"><img src="images/p3_5_2.png"><img src="images/p3_5_2_1.png"><img src="images/p3_5_2_2.png"><img src="images/p3_5_2_3.png"><img src="images/p3_5_2_4.png"><img src="images/p3_5_2_5.png"><img src="images/p3_5_2_6.png"><img src="images/p3_5_2_7.png"><img src="images/p3_5_2_8.png"><img src="images/p3_5_2_9.png"><img src="images/p3_5_3.png"><img src="images/p3_5_3_1.png"><img src="images/p3_5_3_2.png"><img src="images/p3_5_3_3.png"><img src="images/p3_5_3_4.png"><img src="images/p3_5_3_5.png"><img src="images/p3_5_3_6.png"><img src="images/p3_5_4.png"><img src="images/p3_5_5.png"><img src="images/p3_5_t1.png"><img src="images/p3_5_t2.png"><img src="images/p3_5_t3.png"><img src="images/p3_5_t4.png"><img src="images/p3_5_t5.png"><img src="images/p3_6.png"><img src="images/p3_6_1_1.png"><img src="images/p3_6_1_2.png"><img src="images/p3_6_1_3.png"><img src="images/p3_6_1_4.png"><img src="images/p3_6_1_5.png"><img src="images/p3_6_1_p1.png"><img src="images/p3_6_1_p2.png"><img src="images/p3_6_1_p3.png"><img src="images/p3_6_1_p4.png"><img src="images/p3_6_1_t1.png"><img src="images/p3_6_1_t2.png"><img src="images/p3_6_1_t3.png"><img src="images/p3_6_1_t4.png"><img src="images/p3_6_2_1.png"><img src="images/p3_6_2_2.png"><img src="images/p3_6_2_3.png"><img src="images/p3_6_2_4.png"><img src="images/p3_6_2_5.png"><img src="images/p3_7.png"><img src="images/p3_8.png"><img src="images/p41_1.png"><img src="images/p41_2.png"><img src="images/p41_3.png"><img src="images/p41_4.png"><img src="images/p41_5.png"><img src="images/p4_3_2p1.png"><img src="images/p4_3_2p2.png"><img src="images/p4_p1.png"><img src="images/p4_p2.png"><img src="images/p4_p3.png"><img src="images/p4_p4.png"><img src="images/p4_p5.png"><img src="images/p4_p6.png"><img src="images/p4_p7.png"><img src="images/p4_p8.png"><img src="images/p4_p9.png"><img src="images/prev.png"><img src="images/tab.png"><img src="images/tab1.png"><img src="images/tab2.png"><img src="images/tab3.png"><img src="images/topBar.png"></div>';
+var pcImgs1 = '<img src="images/index_p1.png"><img src="images/index_p10.png"><img src="images/index_p11.png"><img src="images/index_p12.png"><img src="images/index_p13.png"><img src="images/index_p2.png"><img src="images/index_p3.png"><img src="images/index_p4.png"><img src="images/index_p5.png"><img src="images/index_p6.png"><img src="images/index_p7.png"><img src="images/index_p8.png"><img src="images/index_p9.png"><img src="images/index_play1.png"><img src="images/index_play2.png"><img src="images/index_play3.png"><img src="images/light.png"><img src="images/light2.png"><img src="images/lineBtn.png"><img src="images/mBtn1.png"><img src="images/mBtn2.png"><img src="images/mBtn3.png"><img src="images/mBtn4.png"><img src="images/mBtn5.png"><img src="images/ml1.png"><img src="images/ml2.png"><img src="images/mm0.png"><img src="images/mm1.png"><img src="images/mm2.png"><img src="images/mm3.png"><img src="images/mm4.png"><img src="images/mm5.png"><img src="images/p1a_1.png"><img src="images/p1a_2.png"><img src="images/p1a_3.png"><img src="images/p1a_4.png"><img src="images/p1a_5.png"><img src="images/p1a_6.png"><img src="images/p1a_7.png"><img src="images/p1a_8.png"><img src="images/p1t_1.png"><img src="images/p1t_2.png"><img src="images/p1t_3.png"><img src="images/p1t_4.png"><img src="images/p1t_5.png"><img src="images/p1t_6.png"><img src="images/p1t_7.png"><img src="images/p1t_8.png"><img src="images/p1_1.png"><img src="images/p1_2.png"><img src="images/p1_3.png"><img src="images/p1_4.png"><img src="images/p1_5.png"><img src="images/p1_p1.png"><img src="images/p1_p2.png"><img src="images/p1_p3.png">';
+var pcImgs2 = '<img src="images/2.png"><img src="images/back.png"><img src="images/bg.jpg"><img src="images/bg.png"><img src="images/brBtn1.png"><img src="images/brBtn2.png"><img src="images/circle.png"><img src="images/fbBtn.png"><img src="images/first"><img src="images/front.png"><img src="images/gif2.gif"><img src="images/gif3.gif"><img src="images/gif6.gif"><img src="images/hand.png"><img src="images/logo.png"><img src="images/p2t_1.png"><img src="images/p2t_2.png"><img src="images/p2t_3.png"><img src="images/p2t_4.png"><img src="images/p2_1.png"><img src="images/p2_12.png"><img src="images/p2_2.png"><img src="images/p2_3.png"><img src="images/p2_4.png"><img src="images/p2_5.png"><img src="images/p3t_1.png"><img src="images/p3t_2.png"><img src="images/p3t_3.png"><img src="images/p3t_4.png"><img src="images/p3_.png"><img src="images/p3_1.png"><img src="images/p3_1_1.png"><img src="images/p3_1_2.png"><img src="images/p3_1_3.png"><img src="images/p3_1_4.png"><img src="images/p3_1_5.png"><img src="images/p3_1_6.png"><img src="images/p3_1_t1.png"><img src="images/p3_1_t2.png"><img src="images/p3_1_t3.png"><img src="images/p3_1_t4.png"><img src="images/p3_2.png"><img src="images/p3_2_1.png"><img src="images/p3_2_2.png"><img src="images/p3_2_3.png"><img src="images/p3_2_4.png"><img src="images/p3_2_5.png"><img src="images/p3_2_6.png"><img src="images/p3_3.png"><img src="images/p3_3_1.png"><img src="images/p3_3_2.png"><img src="images/p3_3_2t.png"><img src="images/p3_3_3.png"><img src="images/p3_3_4.png"><img src="images/p3_3_5.png"><img src="images/p3_3_t1.png"><img src="images/p3_3_t2.png"><img src="images/p3_3_t3.png"><img src="images/p3_3_t4.png"><img src="images/p3_3_t5.png"><img src="images/p3_4.png"><img src="images/p3_4_1.png"><img src="images/p3_4_2.png"><img src="images/p3_4_3.png"><img src="images/p3_4_4.png"><img src="images/p3_4_5.png"><img src="images/p3_4_6.png"><img src="images/p3_4_7.png"><img src="images/p3_4_t1.png"><img src="images/p3_4_t2.png"><img src="images/p3_4_t3.png"><img src="images/p3_4_t4.png"><img src="images/p3_5.png"><img src="images/p3_5_1.png"><img src="images/p3_5_2.png"><img src="images/p3_5_2_1.png"><img src="images/p3_5_2_2.png"><img src="images/p3_5_2_3.png"><img src="images/p3_5_2_4.png"><img src="images/p3_5_2_5.png"><img src="images/p3_5_2_6.png"><img src="images/p3_5_2_7.png"><img src="images/p3_5_2_8.png"><img src="images/p3_5_2_9.png"><img src="images/p3_5_3.png"><img src="images/p3_5_3_1.png"><img src="images/p3_5_3_2.png"><img src="images/p3_5_3_3.png"><img src="images/p3_5_3_4.png"><img src="images/p3_5_3_5.png"><img src="images/p3_5_3_6.png"><img src="images/p3_5_4.png"><img src="images/p3_5_5.png"><img src="images/p3_5_t1.png"><img src="images/p3_5_t2.png"><img src="images/p3_5_t3.png"><img src="images/p3_5_t4.png"><img src="images/p3_5_t5.png"><img src="images/p3_6.png"><img src="images/p3_6_1_1.png"><img src="images/p3_6_1_2.png"><img src="images/p3_6_1_3.png"><img src="images/p3_6_1_4.png"><img src="images/p3_6_1_5.png"><img src="images/p3_6_1_p1.png"><img src="images/p3_6_1_p2.png"><img src="images/p3_6_1_p3.png"><img src="images/p3_6_1_p4.png"><img src="images/p3_6_1_t1.png"><img src="images/p3_6_1_t2.png"><img src="images/p3_6_1_t3.png"><img src="images/p3_6_1_t4.png"><img src="images/p3_6_2_1.png"><img src="images/p3_6_2_2.png"><img src="images/p3_6_2_3.png"><img src="images/p3_6_2_4.png"><img src="images/p3_6_2_5.png"><img src="images/p3_7.png"><img src="images/p3_8.png"><img src="images/p41_1.png"><img src="images/p41_2.png"><img src="images/p41_3.png"><img src="images/p41_4.png"><img src="images/p41_5.png"><img src="images/p4_3_2p1.png"><img src="images/p4_3_2p2.png"><img src="images/p4_p1.png"><img src="images/p4_p2.png"><img src="images/p4_p3.png"><img src="images/p4_p4.png"><img src="images/p4_p5.png"><img src="images/p4_p6.png"><img src="images/p4_p7.png"><img src="images/p4_p8.png"><img src="images/p4_p9.png"><img src="images/prev.png"><img src="images/tab.png"><img src="images/tab1.png"><img src="images/tab2.png"><img src="images/tab3.png"><img src="images/topBar.png">';
+var phoneImgs1 = '<img src="images/index1.png"><img src="images/logo1.png"><img src="images/logo2.png"><img src="images/menum.png"><img src="images/mp2.png">';
+var phoneImgs2 = '<img src="images/bg.jpg"><img src="images/cloz.png"><img src="images/mLogo.png"><img src="images/mmm1.png"><img src="images/mmm2.png"><img src="images/mmm3.png"><img src="images/mmm4.png"><img src="images/mmm41.png"><img src="images/mmm42.png"><img src="images/mmm43.png"><img src="images/mmm44.png"><img src="images/mmm45.png"><img src="images/mmm46.png"><img src="images/mmm5.png"><img src="images/mmmfb.png"><img src="images/mmml.png"><img src="images/mmmline.png"><img src="images/mp3.png"><img src="images/mp41.png"><img src="images/mp42.png"><img src="images/mp43.png"><img src="images/mp44.png"><img src="images/mp45.png"><img src="images/mp46.png"><img src="images/mp4b1.png"><img src="images/mp4b2.png"><img src="images/mp4b3.png"><img src="images/mp4b4.png"><img src="images/mp4b5.png"><img src="images/mp51.png"><img src="images/mp5b1.png"><img src="images/mp5b2.png"><img src="images/mp5b3.png"><img src="images/p1b1.png"><img src="images/p1b2.png">';
 
 $(document).ready(function() {
-	if(ChungTool.isPhone()){
-		$('.loadPicWrap').append(phoneImgs);
-	}else{
-		$('.loadPicWrap').append(pcImgs);
-	}
-    
+    if (ChungTool.isPhone()) {
+        $('.loadPicWrap .loadingFirst').append(phoneImgs1);
+        $('.loadPicWrap .others').append(phoneImgs2);
+    } else {
+        $('.loadPicWrap .loadingFirst').append(pcImgs1);
+        $('.loadPicWrap .others').append(pcImgs2);
+    }
+
 
     // 菜單
     initHeaderMenu();
@@ -16,45 +20,62 @@ $(document).ready(function() {
     initSwitcherAni();
 
 
-
+    initVideoBtn();
     // gtm tracking 
     initGTMTrack();
 
 
-   
+
     initShareBtns();
 
-     $('body').waitForImages({
+    $('.loadingFirst').waitForImages({
         finished: function() {
             // $('#loading').find('.loadingTxt').html('100');
-            simpleHide($('.loadingPage'),0);
+            simpleHide($('.loadingPage'), 0);
             // _gaPV('index');
             playAni(getChannelString());
         },
         each: function(loaded, count, success) {
             var r = Math.floor(loaded / count * 100);
             // console.log(loaded,count)
-            $('.loadingPage').find('.txt').html(r+'%');
-            
+            $('.loadingPage').find('.txt').html(r + '%');
+
         },
         waitForAll: true
     });
 
+
 })
 
-function initShareBtns(){
-	$('.lineBtn').click(function(){
-		ChungTool.shareToLine(window.location.href);
-	});
 
-	$('.FbBtn').click(function(){
-		ChungTool.fbshareCurrentPage();
-	});
+function initVideoBtn() {
+    var btn = $('.p1 .videoBtn');
+    var video = $('.videoPop')
+    btn.click(function(event) {
+        simpleShow(video);
+        ChungTool.addYouTube(video.find('.videoWrap'), '_0cHJOorvEI');
+    });
+
+    video.find('.clozBtn').click(function(event) {
+        video.find('.videoWrap').empty();
+        simpleHide(video);
+    });
+}
+
+
+function initShareBtns() {
+    $('.lineBtn').click(function() {
+        ChungTool.shareToLine(window.location.href);
+    });
+
+    $('.FbBtn').click(function() {
+        ChungTool.fbshareCurrentPage();
+    });
 }
 
 
 function getChannelString() {
-    console.log('getChannelString')
+    // console.log('getChannelString')
     var target = $('.mainContainer');
     var stArr = [];
 
@@ -215,6 +236,41 @@ function initHeaderMenu() {
     });
 
 
+    // ChungTool.addSwipeEvent($('.mainContainer'), function() {
+    //     if (ChungTool.isPhone()) {
+    //         if (prev.css('display') != 'none') {
+    //             prev.trigger('click');
+
+    //         }
+    //     }
+    // }, function() {
+    //     if (ChungTool.isPhone()) {
+    //         if (next.css('display') != 'none') {
+    //             next.trigger('click');
+    //         }
+
+    //     }
+    // })
+
+    $('.mainContainer').on( "swiperight", function(){
+       if (ChungTool.isPhone()) {
+            if (next.css('display') != 'none') {
+                next.trigger('click');
+            }
+
+        }
+    } );
+
+
+     $('.mainContainer').on( "swipeleft", function(){
+      if (ChungTool.isPhone()) {
+            if (prev.css('display') != 'none') {
+                prev.trigger('click');
+
+            }
+        }
+    } );
+
 }
 
 
@@ -278,6 +334,13 @@ function playAni(num) {
             break;
         case '4_2_2':
             playTxt($('.p4 .pageContainer_2 .content_2'));
+            var ani2 = new TimelineMax();
+            var el = $('.p4 .pageContainer_2 .content_2');
+            ani2
+                .set(el.find('.hAni_costom'), { autoAlpha: 0 })
+                .staggerTo(el.find('.hAni_costom'), .4, { delay: .8, scale: 1, autoAlpha: 1, marginTop: 0, marginLeft: 0, rotationY: 0, z: 0, ease: Back.easeOut }, 0.3)
+
+
             break;
         case '4_3_1':
             playTxt($('.p4 .pageContainer_3 .content_1'));
@@ -307,6 +370,13 @@ function playAni(num) {
             break;
         case '4_6_2':
             playTxt($('.p4 .pageContainer_6 .content_2'));
+            var ani2 = new TimelineMax();
+            var el = $('.p4 .pageContainer_6 .content_2');
+            ani2
+                .set(el.find('.hAni_costom'), { autoAlpha: 0 })
+                .staggerTo(el.find('.hAni_costom'), .4, { delay: .8, scale: 1, autoAlpha: 1, marginTop: 0, marginLeft: 0, rotationY: 0, z: 0, ease: Back.easeOut }, 0.3)
+
+
             break;
         case '5':
             playTxt($('.p5'));
@@ -391,16 +461,23 @@ function initSwitcherAni() {
         .to(prevBtn.find('.pic'), 0.15, { ease: Power2.easeInOut, marginLeft: -10, rotation: 20, marginTop: 5 }, 'start')
         .to(prevBtn.find('.pic'), 0.2, { ease: Power2.easeInOut, marginLeft: 10, rotation: 0, marginTop: 0 })
         .to(prevBtn.find('.pic'), 0.08, { repeat: -1, yoyo: true, ease: Power2.easeInOut, marginLeft: 8 })
-        .to(prevBtn.find('.pic'), 0.2, { ease: Back.easeOut, marginLeft: 0, marginTop: 0 }, 'cloz')
-        .pause();
+        .to(prevBtn.find('.pic'), .2, { marginLeft: -2 }, 'cloz')
+        .to(prevBtn.find('.pic'), .3, { marginLeft: 2, yoyo: true, repeat: -1, ease: Power2.easeInOut })
+        .play('cloz');
 
     var tt2 = new TimelineMax();
     tt2
         .to(next.find('.pic'), 0.15, { ease: Power2.easeInOut, marginLeft: 10, rotation: -20, marginTop: 5 }, 'start')
         .to(next.find('.pic'), 0.2, { ease: Power2.easeInOut, marginLeft: -10, rotation: 0, marginTop: 0 })
         .to(next.find('.pic'), 0.08, { repeat: -1, yoyo: true, ease: Power2.easeInOut, marginLeft: -8 })
-        .to(next.find('.pic'), 0.2, { ease: Back.easeOut, marginLeft: 0, marginTop: 0 }, 'cloz')
-        .pause();
+        // .to(next.find('.pic'), 0.2, { ease: Back.easeOut, marginLeft: 0, marginTop: 0 }, 'cloz')
+        .to(next.find('.pic'), .2, { marginLeft: 2 }, 'cloz')
+        .to(next.find('.pic'), .3, { marginLeft: -2, yoyo: true, repeat: -1, ease: Power2.easeInOut })
+        .play('cloz');
+
+
+
+
 
     next.on('mouseenter', function() {
 

@@ -3218,6 +3218,7 @@ a {
   background-image: url("../images/loading.gif");
   display: inline-block;
   vertical-align: middle;
+  max-width: 99%;
   position: relative;
 }
 .loadingPage .pic .txt {
@@ -3292,7 +3293,7 @@ a {
   }
   #header .menuWrap .scrollWrap {
     padding: 60px 0;
-    padding-bottom: 140px;
+    padding-bottom: 280px;
   }
   #header .menuWrap .mBtn {
     margin: 0 auto;
@@ -3650,12 +3651,19 @@ a {
   top: 0;
   left: 0;
   background-image: url("../images/bg.jpg");
+  height: 100%;
+  top: 100px;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 50%;
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    height: calc(100% - 100px);
+  }
 }
 .mainContainer .pageWrap .page {
   display: none;
@@ -3670,6 +3678,16 @@ a {
 }
 .mainContainer.channel_1 .switcherWrap .prevBtn {
   display: none;
+}
+.mainContainer.channel_1 .switcherWrap .nextBtn {
+  width: 108px;
+  height: 108px;
+  background-image: url("../images/p1_h1bg.png");
+}
+.mainContainer.channel_1 .switcherWrap .nextBtn .pic {
+  width: 64px;
+  height: 32px;
+  background-image: url("../images/p1_hand.png");
 }
 .mainContainer.channel_2 .pageWrap .p2 {
   display: block;
@@ -3736,9 +3754,9 @@ a {
     position: absolute;
     bottom: 0;
     left: 0;
-    -moz-animation: bar2 1s linear infinite;
-    -webkit-animation: bar2 1s linear infinite;
-    animation: bar2 1s linear infinite;
+    -moz-animation: bar 1s linear infinite;
+    -webkit-animation: bar 1s linear infinite;
+    animation: bar 1s linear infinite;
   }
 }
 
@@ -3770,6 +3788,16 @@ a {
     transform: translateX(-50%) translateY(-50%);
   }
 }
+@media screen and (min-width: 769px) and (max-height: 750px) {
+  .pageWrap .page .pageContainer {
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.9);
+    -ms-transform: translateX(-50%) translateY(-50%) scale(0.9);
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.9);
+    transform: translateX(-50%) translateY(-50%) scale(0.9);
+    margin-top: 30px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .pageWrap .page .pageContainer {
     position: absolute;
@@ -4126,42 +4154,12 @@ a {
     position: relative;
     cursor: pointer;
   }
-  .pageWrap .p1 .btnWrap .btn1:after, .pageWrap .p1 .btnWrap .btn1:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 15%;
-    background-color: rgba(255, 255, 255, 0.7);
-    -moz-transform: skewY(-30deg);
-    -ms-transform: skewY(-30deg);
-    -webkit-transform: skewY(-30deg);
-    transform: skewY(-30deg);
-    top: -30%;
-  }
-  .pageWrap .p1 .btnWrap .btn1:before {
-    height: 3%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
   .pageWrap .p1 .btnWrap .btn1:hover {
     margin-top: -15px !important;
     -moz-transition: all, 0.3s;
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s;
-  }
-  .pageWrap .p1 .btnWrap .btn1:hover:after {
-    top: 125%;
-    -moz-transition: all, 0.7s;
-    -o-transition: all, 0.7s;
-    -webkit-transition: all, 0.7s;
-    transition: all, 0.7s;
-  }
-  .pageWrap .p1 .btnWrap .btn1:hover:before {
-    top: 125%;
-    -moz-transition: all, 0.8s;
-    -o-transition: all, 0.8s;
-    -webkit-transition: all, 0.8s;
-    transition: all, 0.8s;
   }
   .pageWrap .p1 .btnWrap .btn2 {
     margin-left: 18px;
@@ -4172,42 +4170,12 @@ a {
     position: relative;
     cursor: pointer;
   }
-  .pageWrap .p1 .btnWrap .btn2:after, .pageWrap .p1 .btnWrap .btn2:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 15%;
-    background-color: rgba(255, 255, 255, 0.7);
-    -moz-transform: skewY(-30deg);
-    -ms-transform: skewY(-30deg);
-    -webkit-transform: skewY(-30deg);
-    transform: skewY(-30deg);
-    top: -30%;
-  }
-  .pageWrap .p1 .btnWrap .btn2:before {
-    height: 3%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
   .pageWrap .p1 .btnWrap .btn2:hover {
     margin-top: -15px !important;
     -moz-transition: all, 0.3s;
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s;
-  }
-  .pageWrap .p1 .btnWrap .btn2:hover:after {
-    top: 125%;
-    -moz-transition: all, 0.7s;
-    -o-transition: all, 0.7s;
-    -webkit-transition: all, 0.7s;
-    transition: all, 0.7s;
-  }
-  .pageWrap .p1 .btnWrap .btn2:hover:before {
-    top: 125%;
-    -moz-transition: all, 0.8s;
-    -o-transition: all, 0.8s;
-    -webkit-transition: all, 0.8s;
-    transition: all, 0.8s;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5146,7 +5114,7 @@ a {
 .pageWrap .p4 .pageContainer_2 .content_1 .picWrap {
   position: absolute;
   top: -385px;
-  left: -532px;
+  left: -552px;
   width: 720px;
   height: 720px;
   background-image: url("../images/gif1.gif");
@@ -6935,42 +6903,12 @@ a {
   position: relative;
   cursor: pointer;
 }
-.pageWrap .p5 .pageContainer .txtWrap .t2:after, .pageWrap .p5 .pageContainer .txtWrap .t2:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 15%;
-  background-color: rgba(255, 255, 255, 0.7);
-  -moz-transform: skewY(-30deg);
-  -ms-transform: skewY(-30deg);
-  -webkit-transform: skewY(-30deg);
-  transform: skewY(-30deg);
-  top: -30%;
-}
-.pageWrap .p5 .pageContainer .txtWrap .t2:before {
-  height: 3%;
-  background-color: rgba(255, 255, 255, 0.5);
-}
 .pageWrap .p5 .pageContainer .txtWrap .t2:hover {
   margin-top: -15px !important;
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
-}
-.pageWrap .p5 .pageContainer .txtWrap .t2:hover:after {
-  top: 125%;
-  -moz-transition: all, 0.7s;
-  -o-transition: all, 0.7s;
-  -webkit-transition: all, 0.7s;
-  transition: all, 0.7s;
-}
-.pageWrap .p5 .pageContainer .txtWrap .t2:hover:before {
-  top: 125%;
-  -moz-transition: all, 0.8s;
-  -o-transition: all, 0.8s;
-  -webkit-transition: all, 0.8s;
-  transition: all, 0.8s;
 }
 .pageWrap .p5 .pageContainer .txtWrap .t3 {
   width: 58px;
@@ -6981,42 +6919,12 @@ a {
   position: relative;
   cursor: pointer;
 }
-.pageWrap .p5 .pageContainer .txtWrap .t3:after, .pageWrap .p5 .pageContainer .txtWrap .t3:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 15%;
-  background-color: rgba(255, 255, 255, 0.7);
-  -moz-transform: skewY(-30deg);
-  -ms-transform: skewY(-30deg);
-  -webkit-transform: skewY(-30deg);
-  transform: skewY(-30deg);
-  top: -30%;
-}
-.pageWrap .p5 .pageContainer .txtWrap .t3:before {
-  height: 3%;
-  background-color: rgba(255, 255, 255, 0.5);
-}
 .pageWrap .p5 .pageContainer .txtWrap .t3:hover {
   margin-top: -15px !important;
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
-}
-.pageWrap .p5 .pageContainer .txtWrap .t3:hover:after {
-  top: 125%;
-  -moz-transition: all, 0.7s;
-  -o-transition: all, 0.7s;
-  -webkit-transition: all, 0.7s;
-  transition: all, 0.7s;
-}
-.pageWrap .p5 .pageContainer .txtWrap .t3:hover:before {
-  top: 125%;
-  -moz-transition: all, 0.8s;
-  -o-transition: all, 0.8s;
-  -webkit-transition: all, 0.8s;
-  transition: all, 0.8s;
 }
 .pageWrap .p5 .pageContainer .txtWrap .t4 {
   width: 58px;
@@ -7027,42 +6935,12 @@ a {
   position: relative;
   cursor: pointer;
 }
-.pageWrap .p5 .pageContainer .txtWrap .t4:after, .pageWrap .p5 .pageContainer .txtWrap .t4:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 15%;
-  background-color: rgba(255, 255, 255, 0.7);
-  -moz-transform: skewY(-30deg);
-  -ms-transform: skewY(-30deg);
-  -webkit-transform: skewY(-30deg);
-  transform: skewY(-30deg);
-  top: -30%;
-}
-.pageWrap .p5 .pageContainer .txtWrap .t4:before {
-  height: 3%;
-  background-color: rgba(255, 255, 255, 0.5);
-}
 .pageWrap .p5 .pageContainer .txtWrap .t4:hover {
   margin-top: -15px !important;
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
-}
-.pageWrap .p5 .pageContainer .txtWrap .t4:hover:after {
-  top: 125%;
-  -moz-transition: all, 0.7s;
-  -o-transition: all, 0.7s;
-  -webkit-transition: all, 0.7s;
-  transition: all, 0.7s;
-}
-.pageWrap .p5 .pageContainer .txtWrap .t4:hover:before {
-  top: 125%;
-  -moz-transition: all, 0.8s;
-  -o-transition: all, 0.8s;
-  -webkit-transition: all, 0.8s;
-  transition: all, 0.8s;
 }
 .pageWrap .p5 .pageContainer .txtWrap .t1 {
   margin-left: 43px !important;
@@ -7076,50 +6954,160 @@ a {
   right: 25px;
   top: 50%;
   margin-top: -18px;
-  width: 86px;
-  height: 68px;
   cursor: pointer;
+  width: 108px;
+  height: 108px;
+  background-image: url("../images/p1h2.png");
+}
+@media screen and (max-width: 768px) {
+  .switcherWrap .prevBtn {
+    right: 5px;
+  }
 }
 .switcherWrap .prevBtn .pic {
-  width: 83px;
-  height: 37px;
-  background-image: url("../images/hand.png");
+  width: 64px;
+  height: 32px;
+  background-image: url("../images/p1h3.png");
   position: absolute;
-  top: 0;
-  left: 0;
-}
-.switcherWrap .prevBtn .txt {
-  width: 37px;
-  height: 16px;
-  background-image: url("../images/back.png");
-  position: absolute;
-  top: 50px;
-  left: 18px;
+  top: 26px;
+  left: 23px;
 }
 .switcherWrap .nextBtn {
+  width: 108px;
+  height: 109px;
+  background-image: url("../images/p1h12.png");
   position: fixed;
   left: 25px;
   top: 50%;
   margin-top: -18px;
-  width: 86px;
-  height: 68px;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .switcherWrap .nextBtn {
+    left: 5px;
+  }
+}
 .switcherWrap .nextBtn .pic {
-  width: 83px;
-  height: 37px;
-  background-image: url("../images/prev.png");
+  width: 64px;
+  height: 32px;
+  background-image: url("../images/p1h23.png");
+  position: absolute;
+  top: 26px;
+  left: 20px;
+}
+
+.videoPop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: black;
+  z-index: 20;
+  text-align: center;
+}
+.videoPop:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.videoPop .videoWrap {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 99%;
+  position: relative;
+  width: 100%;
+  max-height: 99%;
+}
+.videoPop .videoWrap:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 56.25%;
+}
+.videoPop .videoWrap > .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.videoPop .videoWrap iframe {
   position: absolute;
   top: 0;
   left: 0;
 }
-.switcherWrap .nextBtn .txt {
-  width: 51px;
-  height: 16px;
-  background-image: url("../images/front.png");
+.videoPop .clozBtn {
+  width: 72px;
+  height: 69px;
+  background-image: url("../images/videoCloz.png");
   position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.ci {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  position: relative;
+}
+.ci .logo {
+  position: relative;
+  max-width: 653px;
+  max-height: 169px;
+  margin: 0;
+  left: 0px;
+  top: -10px;
+}
+.ci .logo img {
+  width: 60%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.ci .layer {
+  font-size: 14px;
+  background: #0361A1;
+  color: #FFF;
+  width: 260px;
+  height: 25px;
+  position: absolute;
+  top: 67px;
+  right: 20%;
+  margin-top: 0;
+  padding-top: 5px;
+  text-align: center;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.ci .CommunitySharing {
+  position: absolute;
+  width: 8%;
   top: 50px;
-  left: 15px;
+  right: 1%;
+}
+.ci .icon.facebook {
+  float: left;
+}
+.ci .CommunitySharing img {
+  margin: 0 auto;
+}
+.ci .blueBar {
+  width: 100%;
+  position: absolute;
+  top: 92px;
+  height: 8px;
+  background: #0361A1;
+}
+.ci .hoverButton {
+  cursor: pointer;
+}
+.ci .fontOrange {
+  color: #f58923;
 }
 
 .padShow {
