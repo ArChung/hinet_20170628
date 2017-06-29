@@ -215,7 +215,7 @@ var simpleHide = simpleHide || {};
 
 
     function addYouTube(el, vid) {
-        el.empty().append('<iframe allowfullscreen="" frameborder="0" height="100%" width="100%" src="http://www.youtube.com/embed/' + vid + '?rel=0&autoplay=1"></iframe>');
+        el.empty().append('<iframe allowfullscreen="" frameborder="0" height="100%" width="100%" src="//www.youtube.com/embed/' + vid + '?rel=0&autoplay=1"></iframe>');
     }
 
     function getDivBgImage(el) {
