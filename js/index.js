@@ -33,6 +33,8 @@ $(document).ready(function() {
             // $('#loading').find('.loadingTxt').html('100');
             simpleHide($('.loadingPage'), 0);
             // _gaPV('index');
+            $('.mainContainer').removeClass('hide');
+            $('.ci').removeClass('hide');
             playAni(getChannelString());
         },
         each: function(loaded, count, success) {
