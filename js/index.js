@@ -46,10 +46,19 @@ $(document).ready(function() {
         waitForAll: true
     });
 
+    
+    initHomeBtn()
+
 
 })
 
-
+function initHomeBtn(){
+    $('.homeBtn').click(function(){
+        replaceChannel($('.mainContainer'),1);
+        playAni(getChannelString());
+        
+    })
+}
 function initVideoBtn() {
     var btn = $('.p1 .videoBtn');
     var video = $('.videoPop')

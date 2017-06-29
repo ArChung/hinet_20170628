@@ -31,3 +31,9 @@
 [0629/211054.089:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 存取被拒。 (0x5)
 [0629/211054.973:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: 管道已結束。 (0x6D)
 [0629/211055.606:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0629/213134.575:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 存取被拒。 (0x5)
+[0629/213134.692:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: 管道已結束。 (0x6D)
+[0629/213134.693:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0629/213316.253:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 存取被拒。 (0x5)
+[0629/213316.880:ERROR:registration_protocol_win.cc(60)] WaitNamedPipe: 系統找不到指定的檔案。 (0x2)
+[0629/213316.880:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
