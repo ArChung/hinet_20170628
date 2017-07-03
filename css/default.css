@@ -3738,9 +3738,6 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    -moz-animation: bar 1s linear infinite;
-    -webkit-animation: bar 1s linear infinite;
-    animation: bar 1s linear infinite;
     z-index: 2;
   }
   .mainContainer:before {
@@ -3756,9 +3753,6 @@ a {
     bottom: 0;
     left: 0;
     z-index: 2;
-    -moz-animation: bar 1s linear infinite;
-    -webkit-animation: bar 1s linear infinite;
-    animation: bar 1s linear infinite;
   }
 }
 
