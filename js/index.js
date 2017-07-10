@@ -64,7 +64,7 @@ function initVideoBtn() {
     var video = $('.videoPop')
     btn.click(function(event) {
         simpleShow(video);
-        ChungTool.addYouTube(video.find('.videoWrap'), '_0cHJOorvEI');
+        ChungTool.addYouTube(video.find('.videoWrap'), 'v6qOCuk4ClA');
     });
 
     video.find('.clozBtn').click(function(event) {

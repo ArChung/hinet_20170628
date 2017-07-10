@@ -37,3 +37,4 @@
 [0629/213316.253:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 存取被拒。 (0x5)
 [0629/213316.880:ERROR:registration_protocol_win.cc(60)] WaitNamedPipe: 系統找不到指定的檔案。 (0x2)
 [0629/213316.880:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0706/132852.632:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 存取被拒。 (0x5)

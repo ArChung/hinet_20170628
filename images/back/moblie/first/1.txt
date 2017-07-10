@@ -1,6 +1,0 @@
-1.txt
-index1.png
-logo1.png
-logo2.png
-menum.png
-mp2.png
