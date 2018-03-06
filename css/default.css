@@ -3644,6 +3644,10 @@ a {
   }
 }
 
+.ui-loader {
+  display: none;
+}
+
 .mainContainer {
   position: absolute;
   width: 100%;
@@ -3652,7 +3656,6 @@ a {
   left: 0;
   background-image: url("../images/bg.jpg");
   height: 100%;
-  top: 100px;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;

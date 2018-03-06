@@ -34,7 +34,7 @@ $(document).ready(function() {
             simpleHide($('.loadingPage'), 0);
             // _gaPV('index');
             $('.mainContainer').removeClass('hide');
-            $('.ci').removeClass('hide');
+            // $('.ci').removeClass('hide');
             playAni(getChannelString());
         },
         each: function(loaded, count, success) {
