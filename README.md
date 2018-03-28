@@ -1,3 +1,3 @@
-# hinet_20170628
+## hinet  光世代官網
 
-https://archung.github.io/hinet_repo/
+demo: https://archung.github.io/hinet_repo/
